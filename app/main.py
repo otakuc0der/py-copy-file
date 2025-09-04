@@ -2,9 +2,9 @@ import os
 
 
 def copy_file(command: str) -> None:
-    command_elems = command.split()
-    if len(command_elems) == 3:
-        command, file_to_copy, new_file_name = command.split()
+    command_parts = command.split()
+    if len(command_parts) == 3:
+        command, file_to_copy, new_file_name = command_parts
         if (
             command == "cp"
             and os.path.exists(file_to_copy)
